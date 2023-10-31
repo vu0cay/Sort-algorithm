@@ -1,4 +1,5 @@
-#pragma once
+#include <bits/stdc++.h>
+using namespace std;
 
 int Partition(int a[],int l,int r,int pivot){
 	int i = l;
