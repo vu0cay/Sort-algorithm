@@ -1,7 +1,5 @@
-#include <bits/stdc++.h>
-using namespace std;
 
-int Partition(int a[],int l,int r,int pivot){
+int Partition(ElementType a[],int l,int r,ElementType pivot){
 	int i = l;
 	int j = r;
 	
@@ -15,7 +13,7 @@ int Partition(int a[],int l,int r,int pivot){
 	
 	return i;
 }
-int findpivot(int a[],int l,int r){
+int findpivot(ElementType a[],int l,int r){
 	int firstkey = a[l];
 	int i = l+1;
 	while(i<=r && a[i] == firstkey) i++;
@@ -25,8 +23,9 @@ int findpivot(int a[],int l,int r){
 		else return i;
 	}
 }
-void Quicksort(int a[],int l,int r){
-	int k,pivotindex,pivot;
+void Quicksort(ElementType a[],int l,int r){
+	int k,pivotindex;
+	ElementType pivot;
 	pivotindex = findpivot(a,l,r);
 	if(pivotindex!=-1){
 		pivot = a[pivotindex];
