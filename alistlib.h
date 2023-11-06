@@ -4,6 +4,7 @@
 
 typedef int Position;
 typedef int ElementType;
+
 typedef struct{
   ElementType elements[MAXSIZE];
   Position size;
@@ -115,7 +116,7 @@ ElementType popAt(Position p, List *L){
 		x= L->elements[p-1];
 		Position q;	
 		for(q=p;q<endList(*L);q++)
-			L->elements[q-1]=L->elements[q];	
+			L->elements[q-1] = L->elements[q];	
 		L->size--;
 		return x;
 	}

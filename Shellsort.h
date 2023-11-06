@@ -1,3 +1,4 @@
+
 int getInterval(int n){
   int k = 1;
 	if(n/3 > k){
@@ -5,19 +6,20 @@ int getInterval(int n){
     }
   return k;
 }
-void shellSort(ElementType a[],int n)
+void shellSort(ElementType A[],int n)
 {
   int k = getInterval(n);
+	int i,j;
 	while(k > 0 )
 	{
 		for(i = k; i<n; i++)
 		{
-			int val = a[i];
-			for(j = i; j>=k && a[j-k] >= val; j-=k)
+			int val = A[i];
+			for(j = i; j>=k && A[j-k] >= val; j-=k)
 			{
-				a[j] = a[j-k];
+				A[j] = A[j-k];
 			}
-			a[j] = val;
+			A[j] = val;
 		}
         k = (k-1)/3;
 	}
